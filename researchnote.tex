@@ -1,0 +1,479 @@
+
+%% bare_conf.tex
+%% V1.4b
+%% 2015/08/26
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
+%% conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/pkg/ieeetran
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall the IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%*************************************************************************
+
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. The IEEE's font choices and paper sizes can   ***
+% *** trigger bugs that do not appear when using other class files.       ***                          ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+\documentclass[conference]{IEEEtran}
+% Some Computer Society conferences also require the compsoc mode option,
+% but others use the standard conference format.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/pkg/ifpdf
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+\usepackage{cite}
+\usepackage[numbers]{natbib}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of the IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off
+% such as if a citation ever needs to be enclosed in parenthesis.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 5.0 (2009-03-20) and later if using hyperref.sty.
+% The latest version can be obtained at:
+% http://www.ctan.org/pkg/cite
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation
+% can be obtained at: 
+% http://www.ctan.org/pkg/graphicx
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found at:
+% http://www.ctan.org/pkg/epslatex
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics.
+%
+% Note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/amsmath
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/pkg/algorithms
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/pkg/algorithmicx
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/array
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\ifCLASSOPTIONcompsoc
+%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+%\else
+%  \usepackage[caption=false,font=footnotesize]{subfig}
+%\fi
+% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
+% for subfigure.sty, the latter of which is no longer maintained and is
+% incompatible with some LaTeX packages including fixltx2e. However,
+% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
+% which will override IEEEtran.cls' handling of captions and this will result
+% in non-IEEE style figure/table captions. To prevent this problem, be sure
+% and invoke subfig.sty's "caption=false" package option (available since
+% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
+% handling of captions.
+% Note that the Computer Society format requires a larger sans serif font
+% than the serif footnote size font used in traditional IEEE formatting
+% and thus the need to invoke different subfig.sty package options depending
+% on whether compsoc mode has been enabled.
+%
+% The latest version and documentation of subfig.sty can be obtained at:
+% http://www.ctan.org/pkg/subfig
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure.
+% Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
+% corrections already built into the system in which case a warning will
+% be issued if an attempt is made to load fixltx2e.sty as it is no longer
+% needed.
+% The latest version and documentation can be found at:
+% http://www.ctan.org/pkg/fixltx2e
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/stfloats
+% Do not use the stfloats baselinefloat ability as the IEEE does not allow
+% \baselineskip to stretch. Authors submitting work to the IEEE should note
+% that the IEEE rarely uses double column equations and that authors should try
+% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
+% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
+% such ways.
+% Do not attempt to use stfloats with fixltx2e as they are incompatible.
+% Instead, use Morten Hogholm'a dblfloatfix which combines the features
+% of both fixltx2e and stfloats:
+%
+% \usepackage{dblfloatfix}
+% The latest version can be found at:
+% http://www.ctan.org/pkg/dblfloatfix
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/url
+% Basically, \url{my_url_here}.
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+% \hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% Titles are generally capitalized except for words such as a, an, and, as,
+% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
+% not capitalized unless they are the first or last word of the title.
+% Linebreaks \\ can be used within to get better formatting as desired.
+% Do not put math or special symbols in the title.
+\title{Docker Containers\\A new way of high performance computing?}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{\IEEEauthorblockN{Filip Reichel}
+\IEEEauthorblockA{M.Sc. Computer Science\\
+Computer Science and Mathematics\\
+OTH Regensburg, Regensburg, Germany\\
+Email: reichel@eumx.net}}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3}, 
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract
+\begin{abstract}
+The purpose of this work is to examine the usage of Docker Containers within the area of High Performance Computing. Docker containers can be seen as small operating systems that serve for running only one single program or service. Since it is not very easy to understand the needs of modern HPC clusters without prior understanding of the underlying techniques an introduction to the Docker principle and to its main technologies will be given. While this may seem a little bit technical at first sight it is necessary to understand the following examples of scientific applications that will be presented afterwards. They main goal of HPC is to get complex calculations done on a limited amount of resources. It is important to use the available hardware as efficient as possible to reduce the overall calculation time and improve the throughput.\\
+
+The current state of Docker containers for HPC is promising and they start getting adopted on a wide basis. However there were two big problems that needed to be solved. One problem was the bad network performance which needed to disable the separate namespaces for networking and using a bridged configuration instead. The second big obstacle was the filesystem overlay which should actually prevent the container from writing to the host's filesystem directly. This decreased write performance and needed to be bypassed by mounting the filesystems directly as data volumes.\\
+
+The big advantage of using Docker is the very small footprint a container has on the host's operating system. It only consumes resources as work is done in the container. Also the easy management of the containers and the tools provided by the Docker project add to the success of the new technology. Finally the overall performance of Docker containers is very good and reaches nearly that of native operation.
+\end{abstract}
+
+
+\renewcommand\IEEEkeywordsname{Keywords}
+\begin{IEEEkeywords}
+docker container; virtual machines; LXC; high performance computing; system architecture;
+\end{IEEEkeywords}
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+\section{Introduction}
+Performing complex mathematic calculations requires squeezing the last bit of power out of the given hardware. The operation of such a high performance computing cluster (HPC cluster) is a costly endeavour. It is important to max out the usage of the servers to keep operating costs at an acceptable level. One important application of HPC clusters is the calculation of the complex models required to generate the daily weather forecasts. Furthermore it is common to perform calculations for clients from the industry and the finance sector. As can be seen the variety of use cases for a HPC cluster is enormous. As a consequence of that it is not surprising that the requirements of the clients become more and more complex and often require the support of new technologies and new computing models. Among those new technologies are Hadoop which uses Map-Reduce-Algorithms and MongoDB as a representative of the new NoSQL databases \cite{wiese2015,Redmond2012}.\\
+
+Since many modern technologies were not designed specifically for the deployment in distributed computing environments workarounds had to be found. Another problem was that the new software might have dependencies that the existing operating system could not satisfy or that even conflicted with already installed versions in the system. To make those new applications work with the existing environment required a lot of trial-and-error to find appropriate solutions. Since it is not good to use the productive system to try out new things the only way to keep the productive system clean is to use another host for testing purposes. In former times it was the usual way to setup a dedicated server to test out new things. Doing this on a regular basis took a lot of time. So new ways of testing had to be found.\\
+
+In the beginning the researchers had to test on virtual machines which meant that resources from the host system were given to the guest operating system. This did work out quite well but it also meant to have more powerful hardware for the host system. In many cases all this overhead was unnecessary. In 2013 a new system called "Docker Containers" was announced. The technology behind Docker was not really new, it actually existed for quite some time in the linux kernel \cite{Merkel2014}. However Docker created a set of tools and an API around the necessary parts to make its use more convenient. From now on it was possible to use linux containers within a linux host operating system.\\
+
+\section{Linux containers}
+In order to understand the benefits of Docker Containers it is necessary to take a closer look at the underlying principles of linux containers (LXC). The main difference is the target that is emulated, it can either be the hardware that is virtualized (HVM) or the software which is running on it. LXC uses the latter approach and emulates the software that is to be executed.\\
+
+\subsection{Hardware virtualization versus container virtualization}
+Emulating a whole computer system with its hardware is called hardware virtualization. It behaves similiar to using a dedicated stand-alone server. Nevertheless it only emulates the physical hardware. A stand-alone server always needs an operating system on it and of course the actual software to be tested. So for a quick experiment the effort is way to high to do that every time from scratch. Actually it would be sufficient to emulate only the software to be tested.\\ 
+
+This is where linux containers (LXC) come in handy. They do provide exactly what is needed --- a container just for the software to be tested. This means that only the processes that the container creates for testing are running within the containers environment. All other parts that are necessary to execute the code need to be supplied by the host operating system.\\
+
+\subsection{System Architecture of LXC}
+The underlying concept is of course a little bit more complex. In order to achieve its goal of running as a lightweight process in the kernel LXC needs to run isolated from the host environment. That is necessary because of security reasons. LXC containers need to have root priviledges for operating properly and could harm the host if not secured properly.\\
+
+In order to isolate the container's concerns from the host's a separate kernel and user namespace are used. As a result the container does not see the processes of the host and they do not interphere with each other. Another benefit of doing this is that it is guaranteed that the root of the container cannot gain admin access to the host's operating system. The second measurement to secure the host is to prevent the guest from changing the host's system files. This is realized by using a copy-on-write-filesystem. Copy-on-write means that the actual filesystem has an overlay which blocks all modifications to files and records the changes in an abstraction layer instead. Lastly the container shares resources with the host so that it only needs to execute the missing dependencies itself. This is also the main danger for the LXC, if the host dies, the guest also is not operating any more – just like in an ordinary HVM. Of course there exists also a resource management, called 'cgroups', to restrict resources for the LXC. In addition to managing resources they can also deliver statistics from the LXC, its current state or its healthiness \cite{Merkel2014}.\\
+
+\subsection{Benefits of using LXC}
+The main advantage of this architecture is that it uses resources much more efficient than pure hardware virtualization. Since almost all dependencies are taken from the hosts operating system only dependencies that either are missing on the host or are conflicting with them need to be executed by the container. This also affects the startup und shutdown time of the container. From the view of the host it is only one new process per container that needs to be handled. Furthermore a container does only consume resources from the host if it is executing some work. By using AuFS as a layered filesystem it is possible to use one base image for many different containers, this saves disk space. It is also possible to version container images so that only the changes from the last saved state need to be stored. The characteristics presented above make it easy and fast to deploy new containers on any docker compatible host \cite{Merkel2014}.
+
+\section{Docker Containers}
+As mentioned before the technology behind Docker is not new since it uses LXC. Almost all components existed already in the kernel and were considered production ready. The revolutionary about Docker is that it made these technologies accessible with a small set of tools and an unified API.
+
+\subsection{Docker repositories}
+"One of Docker's killer features is the ability to find, download and start container images that were created by other developers quickly. The place where images are stored is called a registry [...] You can think of the registry along with the Docker client as the equivalent of Node's NPM, Perl's CPAN or Ruby's RubyGems." \cite{Merkel2014}\\
+
+Docker's public registry offers a wide variety of base images to start customizing your own images with and images that contain standard software like web servers, databases and content management systems. It is also possible to maintain private repositories that can be used to store proprietary code. 
+
+\subsection{Running Docker images}
+Docker containers can be managed easily by using the command line interface or by sending remote requests to the REST API. The CLI can search the public repositories for images and download the desired image onto the machine. Docker then checks automatically if the requested image was built from other images and downloads them as well if needed. The container then only needs to be started and is ready to use. Docker automatically creates a virtual network interface for each running container. The network address can be obtained by showing the containers configuration. When the container is not needed any longer it can be shutdown immediately. \cite{Merkel2014, DockerWeb}\\
+
+\section{Docker in scientific applications}
+The usage of Docker containers in scientific applications has recently gained momentum. Several studies tried to examine the performance impact of using Docker containers regarding performance, throughput and scalability.\\
+
+\subsection{Performance comparison of Virtual Machines and Linux Containers}
+Cloud computing makes extensive use of virtual machines to balance workload and manage resources. Felter et al. examined in a recent study whether linux containers can provide enough performance for scientific applications \cite{Felter2015}. They used the hardware hypervisor KVM \cite{KVM} and the container manager Docker for their comparisons. All tests were executed on a IBM System x3650 M4 server (2x Xeon E5-2665 (16 cores), 256 GB of RAM). The researchers found out that the Docker containers outperform the KVM solution in all aspects examined. There is nearly no overhead on CPU and memory, but the disk throughput is better with Docker because of the use of volumes. If the file system overlay AuFS is used the performance is nearly as poor as KVM's. To handle high disk throughput the use of volumes is the better option. When using network intensive applications it has to be taken care of the negative impact of network address translation (NAT), because each packet has to be modified before sending it out to the hosts network interface. Unfortunately the benefit of a separate network namespace will get lost without NAT. Felter et al. stated that it may be possible to get good performance from KVM if configured very carefully, but this is an error-prone and complex task. They concluded that the application of ressource intensive tasks is possible but ease of use and performance must be carefully weighted against each other.
+
+\subsection{Containers in Research: Initial Experiences with
+Lightweight Infrastructure}
+The research team at Purdue University in Indiana had to face the problem that the users of the HPC Cluster needed a setup that was by default not supported on this HPC system. As they estimated an implementation time of several weeks to fullfill the requirements they had to look for other possibilities \cite{Julian2016}.\\
+
+Julian et al. tried to implement a High Performance Computing (HPC) Cluster based on Docker containers. They used the Moab HPC scheduler to create and destroy Docker containers based on the current workload. They found out, that the time to implement new requirements could be cut down to one day instead of several weeks. However they had to find a solution to the problem of docker's filesystem overlays as they decreased performance significantly. In the end they found a plugin for docker that mounts NFS shares directly into the container. Although not the ideal option it improved throughput so that it nearly reached native performance. The team noted that there are still missing important features from HPC applications like remote direct memory access (RDMA) and native support for data volume management for parallel filesystems. They expect Docker to be widely accepted in HPC environments when these design flaws will have been fixed in the future.\\
+
+Recently HPC tool vendors have also begun integrating native support for Docker. IBM for example has added Docker container integration in its Platform LSF to run containers on an HPC cluster. This allows containers to be executed on an LSF-managed cluster like a conventional job, but with a fully self-contained environment \cite{HPCDocking}. The xCAT cluster provisioning suite has also added Docker integration. The latest versions now support using containers to manage xCAT clusters \cite{xCAT}.
+
+\section{Conclusion}
+The two reports presented before point out clearly the potential of the new technology. It allows the operators of HPC clusters to run software that has dependencies which can not be satisfied by the operating system. Another interesting possibility is to run more than one job on the same computing node. Thanks to the architecture of Docker containers it is no problem to run several containers on one single node as a new container is only a new process to be executed from the view of the host's kernel. Although the implementation of Docker containers within the professional tools for managing HPC clusters is at an early state it was possible to reach near native performance. The researchers found out that the filesystem overlay which is a core feature of LXC has to be bypassed to improve disk write performance. Furthermore the usage of separate network namespaces is decreasing the overall network performance since all packages sent out to the host have to be modified. When using the network interface in bridged mode the throughput reaches the expected values. One problem that needs to be solved to operate properly is the access to paralleled filesystems over the network. At the moment there is no official plugin available to mount NFS shares properly, only a user contributed plugin can be used for mounting such data volumes directly. Finally the direct remote access to system memory over network is missing for a fully powered HPC infrastructure. Since the community behind Docker is very active in this field it will only be a matter of time until the missing features will be implemented properly.
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+\bibliographystyle{IEEEtranSN}
+% \printbibliography
+\bibliography{bibliography}
+
+
+\end{document}
+
+
